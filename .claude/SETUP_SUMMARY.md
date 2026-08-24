@@ -19,17 +19,17 @@ Comprehensive Claude Code configuration for multi-disciplinary SaaS and data eng
 
 | Directory | Status | Documentation | Purpose |
 |-----------|--------|---------------|---------|
-| `agents/` | ✅ | README.md | Custom specialized agents |
-| `skills/` | ✅ | README.md | Reusable workflow skills |
-| `commands/` | ✅ | README.md | CLI-style commands |
-| `hooks/` | ✅ | README.md | Event-driven automation |
-| `loops/` | ✅ | README.md | Recurring workflows |
-| `graphs/` | ✅ | README.md | Workflow orchestration |
-| `mcp/` | ✅ | README.md | External integrations |
-| `plugins/` | ✅ | README.md | Feature extensions |
-| `rules/` | ✅ | README.md | Behavior guidelines |
+| `agents/` | ✅ | AGENTS_GUIDE.md | Custom specialized agents |
+| `skills/` | ✅ | SKILLS_GUIDE.md | Reusable workflow skills |
+| `commands/` | ✅ | COMMANDS_GUIDE.md | CLI-style commands |
+| `hooks/` | ✅ | HOOKS_GUIDE.md | Event-driven automation |
+| `loops/` | ✅ | LOOPS_GUIDE.md | Recurring workflows |
+| `graphs/` | ✅ | GRAPHS_GUIDE.md | Workflow orchestration |
+| `mcp/` | ✅ | MCP_INTEGRATIONS.md | External integrations |
+| `plugins/` | ✅ | PLUGINS_GUIDE.md | Feature extensions |
+| `rules/` | ✅ | RULES_GUIDE.md | Behavior guidelines |
 | `memory/` | ✅ | MEMORY.md | Knowledge management |
-| `logs/` | ✅ | README.md | Logging configuration |
+| `logs/` | ✅ | LOGGING_CONFIG.md | Logging configuration |
 
 ### File Count
 - **Total Configuration Files**: 16
@@ -164,17 +164,17 @@ nano .claude/settings.local.json
 ├── settings.json ....................... Main config
 ├── keybindings.json .................... Shortcuts
 │
-├── agents/README.md .................... Custom agents
-├── skills/README.md .................... Reusable skills
-├── commands/README.md .................. CLI commands
-├── hooks/README.md ..................... Automation
-├── loops/README.md ..................... Recurring tasks
-├── graphs/README.md .................... Workflow graphs
-├── mcp/README.md ....................... Integrations
-├── plugins/README.md ................... Extensions
-├── rules/README.md ..................... Behavior rules
-├── memory/MEMORY.md .................... Knowledge base
-└── logs/README.md ....................... Logging config
+├── agents/AGENTS_GUIDE.md ............... Custom agents
+├── skills/SKILLS_GUIDE.md ............... Reusable skills
+├── commands/COMMANDS_GUIDE.md ........... CLI commands
+├── hooks/HOOKS_GUIDE.md ................. Automation
+├── loops/LOOPS_GUIDE.md ................. Recurring tasks
+├── graphs/GRAPHS_GUIDE.md ............... Workflow graphs
+├── mcp/MCP_INTEGRATIONS.md .............. Integrations
+├── plugins/PLUGINS_GUIDE.md ............. Extensions
+├── rules/RULES_GUIDE.md ................. Behavior rules
+├── memory/MEMORY.md ..................... Knowledge base
+└── logs/LOGGING_CONFIG.md ............... Logging config
 ```
 
 ## 🎓 Learning Path

@@ -18,55 +18,55 @@ Complete index of all Claude Code configuration files and directories.
 
 #### `agents/` - Custom Agents
 **Purpose**: Define specialized agent types for different tasks
-- **README.md** - Agent definitions and specifications
+- **AGENTS_GUIDE.md** - Agent definitions and specifications
 - **Example**: SaaS Engineering Agent, Data Engineering Agent
 - **Add**: Agent definitions following frontmatter format
 
 #### `skills/` - Reusable Skills
 **Purpose**: Define workflow commands and automation
-- **README.md** - Skill types and templates
+- **SKILLS_GUIDE.md** - Skill types and templates
 - **Examples**: Module documentation, data pipeline design
 - **Add**: Skill definitions in `skills/` directory
 
 #### `commands/` - CLI Commands
 **Purpose**: Define custom CLI-style commands
-- **README.md** - Command format and examples
+- **COMMANDS_GUIDE.md** - Command format and examples
 - **Examples**: `/code-review`, `/module-spec`, `/pipeline-check`
 - **Add**: Command definitions following format
 
 #### `hooks/` - Automation Triggers
 **Purpose**: Trigger workflows on events
-- **README.md** - Hook types and configurations
+- **HOOKS_GUIDE.md** - Hook types and configurations
 - **Examples**: Pre-commit hooks, file change hooks, scheduled hooks
 - **Add**: Hook definitions in JSON format
 
 #### `loops/` - Recurring Workflows
 **Purpose**: Define autonomous and scheduled loops
-- **README.md** - Loop types and patterns
+- **LOOPS_GUIDE.md** - Loop types and patterns
 - **Examples**: Code monitoring, pipeline validation, daily briefings
 - **Add**: Loop definitions for recurring tasks
 
 #### `graphs/` - Workflow Orchestration
 **Purpose**: Define multi-phase workflow graphs
-- **README.md** - Graph patterns and orchestration
+- **GRAPHS_GUIDE.md** - Graph patterns and orchestration
 - **Examples**: Module development flow, code review flow, pipeline engineering
 - **Add**: Workflow graph definitions (YAML or JavaScript)
 
 #### `mcp/` - MCP Integrations
 **Purpose**: Configure external service integrations
-- **README.md** - MCP server setup and configurations
+- **MCP_INTEGRATIONS.md** - MCP server setup and configurations
 - **Examples**: GitHub, Jira, AWS, PostgreSQL, Slack
 - **Add**: MCP server configs in settings.json
 
 #### `plugins/` - Feature Extensions
 **Purpose**: Extend Claude Code functionality
-- **README.md** - Plugin development and configuration
+- **PLUGINS_GUIDE.md** - Plugin development and configuration
 - **Examples**: Memory plugin, SaaS modules plugin, code quality plugin
 - **Add**: Plugin configurations in settings.json
 
 #### `rules/` - Behavior Guidelines
 **Purpose**: Define automation rules and quality standards
-- **README.md** - Rule types and examples
+- **RULES_GUIDE.md** - Rule types and examples
 - **Examples**: Type checking, branch protection, schema validation
 - **Add**: Rule definitions in YAML format
 
@@ -175,37 +175,37 @@ plugins/README.md → Custom extensions
 ├── 📄 INDEX.md ........................ This file
 │
 ├── 📁 agents/ ......................... Custom agents
-│   └── README.md
+│   └── AGENTS_GUIDE.md
 │
 ├── 📁 skills/ ......................... Reusable skills
-│   └── README.md
+│   └── SKILLS_GUIDE.md
 │
 ├── 📁 commands/ ....................... CLI commands
-│   └── README.md
+│   └── COMMANDS_GUIDE.md
 │
 ├── 📁 hooks/ .......................... Automation triggers
-│   └── README.md
+│   └── HOOKS_GUIDE.md
 │
 ├── 📁 loops/ .......................... Recurring workflows
-│   └── README.md
+│   └── LOOPS_GUIDE.md
 │
 ├── 📁 graphs/ ......................... Workflow graphs
-│   └── README.md
+│   └── GRAPHS_GUIDE.md
 │
 ├── 📁 mcp/ ............................ MCP integrations
-│   └── README.md
+│   └── MCP_INTEGRATIONS.md
 │
 ├── 📁 plugins/ ........................ Feature extensions
-│   └── README.md
+│   └── PLUGINS_GUIDE.md
 │
 ├── 📁 rules/ .......................... Behavior rules
-│   └── README.md
+│   └── RULES_GUIDE.md
 │
 ├── 📁 memory/ ......................... Knowledge base
 │   └── MEMORY.md
 │
 └── 📁 logs/ ........................... Logging config
-    └── README.md
+    └── LOGGING_CONFIG.md
 ```
 
 ## Common Tasks

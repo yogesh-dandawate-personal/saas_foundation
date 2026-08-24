@@ -62,7 +62,7 @@ Configured for:
 ## Documentation
 
 Each subdirectory contains:
-- `README.md` - Directory-specific documentation
+- Unique guide file (e.g., `AGENTS_GUIDE.md`, `SKILLS_GUIDE.md`)
 - Example configurations
 - Best practices
 
