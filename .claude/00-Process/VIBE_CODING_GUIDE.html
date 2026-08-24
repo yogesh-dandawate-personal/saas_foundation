@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Coding: Building Applications with Flow</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-light: #818cf8;
+            --primary-dark: #4f46e5;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0f172a;
+            --surface: #1e293b;
+            --text: #f1f5f9;
+            --text-muted: #cbd5e1;
+            --border: #334155;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            border-bottom: 2px solid var(--border);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--surface);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.5rem 0;
+            color: var(--primary-dark);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .emoji {
+            font-size: 1.5em;
+        }
+
+        .card {
+            background: linear-gradient(135deg, var(--surface), rgba(99, 102, 241, 0.05));
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .card.success {
+            border-left: 4px solid var(--success);
+        }
+
+        .card.warning {
+            border-left: 4px solid var(--warning);
+        }
+
+        .card.danger {
+            border-left: 4px solid var(--danger);
+        }
+
+        .flow-diagram {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+
+        .code-block {
+            background: rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        [data-theme="dark"] .code-block {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .principles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .principle {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .principle:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
+        }
+
+        .principle-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .principle h4 {
+            margin: 0.5rem 0;
+            color: var(--primary-dark);
+        }
+
+        .workflow-steps {
+            counter-reset: step-counter;
+            list-style: none;
+        }
+
+        .workflow-steps li {
+            counter-increment: step-counter;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: linear-gradient(90deg, rgba(99, 102, 241, 0.1), transparent);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .workflow-steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 1rem;
+            top: 1.5rem;
+            background: var(--primary);
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .checklist {
+            list-style: none;
+        }
+
+        .checklist li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .anti-pattern {
+            list-style: none;
+        }
+
+        .anti-pattern li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-muted);
+        }
+
+        .anti-pattern li::before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: var(--danger);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid var(--border);
+        }
+
+        .comparison-table th {
+            background: rgba(99, 102, 241, 0.1);
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        .example-box {
+            background: var(--surface);
+            border: 2px dashed var(--primary);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .feature-item {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), transparent);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1rem;
+        }
+
+        .feature-item strong {
+            color: var(--primary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            margin-top: 3rem;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--primary);
+            transform: scale(1.1);
+        }
+
+        .highlight {
+            background: rgba(245, 158, 11, 0.2);
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            section {
+                padding: 1rem;
+            }
+
+            .principles {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
+
+    <div class="container">
+        <header>
+            <h1><span class="emoji">✨</span> Vibe Coding</h1>
+            <p class="subtitle">Building Entire Applications with Flow, Intuition, and Claude</p>
+        </header>
+
+        <!-- What is Vibe Coding -->
+        <section>
+            <h2><span class="emoji">🎵</span> What is Vibe Coding?</h2>
+            <p>Vibe coding is a development approach where you work in a <span class="highlight">conversational
+                    flow</span> with Claude Code, letting the momentum and intuition guide your application development
+                rather than following rigid, pre-planned structures.</p>
+
+            <div class="card success">
+                <strong>Core Idea:</strong> Instead of "plan first, code second," you <strong>think out loud</strong>
+                with Claude, discover patterns as you go, and let the application architecture emerge naturally from the
+                conversation.
+            </div>
+
+            <h3>Key Characteristics</h3>
+            <ul class="checklist">
+                <li>Conversational and exploratory process</li>
+                <li>Continuous feedback and iteration</li>
+                <li>Architecture emerges from implementation</li>
+                <li>Rapid prototyping and validation</li>
+                <li>Natural flow with the AI assistant</li>
+                <li>Responsive to discovery and learning</li>
+                <li>Less upfront planning, more adaptive design</li>
+            </ul>
+        </section>
+
+        <!-- When to Vibe Code -->
+        <section>
+            <h2><span class="emoji">🎯</span> When to Vibe Code</h2>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Vibe Coding 🎵</th>
+                        <th>Structured Planning 📋</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>New features, unexplored territory</td>
+                        <td>Large, well-defined projects</td>
+                    </tr>
+                    <tr>
+                        <td>Quick prototypes and MVPs</td>
+                        <td>Enterprise systems with fixed scope</td>
+                    </tr>
+                    <tr>
+                        <td>Learning and experimentation</td>
+                        <td>Regulated, documented projects</td>
+                    </tr>
+                    <tr>
+                        <td>Solo or small team development</td>
+                        <td>Large team coordination</td>
+                    </tr>
+                    <tr>
+                        <td>Iterative discovery</td>
+                        <td>Strict timelines and budgets</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Best For</h3>
+            <div class="principles">
+                <div class="principle">
+                    <div class="principle-icon">🚀</div>
+                    <h4>Startups & MVPs</h4>
+                    <p>Rapid iteration and discovery phase</p>
+                </div>
+                <div class="principle">
+                    <div class="principle-icon">🧪</div>
+                    <h4>Experiments</h4>
+                    <p>Trying new technologies and patterns</p>
+                </div>
+                <div class="principle">
+                    <div class="principle-icon">📚</div>
+                    <h4>Learning</h4>
+                    <p>Building while learning new domains</p>
+                </div>
+                <div class="principle">
+                    <div class="principle-icon">✨</div>
+                    <h4>Features</h4>
+                    <p>New unexplored feature development</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Principles -->
+        <section>
+            <h2><span class="emoji">🌟</span> Core Principles of Vibe Coding</h2>
+
+            <div class="principles">
+                <div class="principle">
+                    <div class="principle-icon">💭</div>
+                    <h4>Think Out Loud</h4>
+                    <p>Describe what you're thinking, not just what you want built. Claude responds to direction, not
+                        commands.</p>
+                </div>
+                <div class="principle">
+                    <div class="principle-icon">🔄</div>
+                    <h4>Iterate Continuously</h4>
+                    <p>Each message is a step forward. Build, test, refine. Don't plan everything upfront.</p>
+                </div>
+                <div class="principle">
+                    <div class="principle-icon">🎨</div>
+                    <h4>Follow the Emergence</h4>
+                    <p>Let good ideas surface naturally. Be willing to change direction based on what you discover.</p>
+                </div>
+                <div class="principle">
+                    <div class="principle-icon">⚡</div>
+                    <h4>Move Fast</h4>
+                    <p>Vibe coding prioritizes momentum over perfection. Ship something, then refine.</p>
+                </div>
+                <div class="principle">
+                    <div class="principle-icon">🤝</div>
+                    <h4>Collaborate with Claude</h4>
+                    <p>You and Claude are a team. Leverage Claude's strengths: pattern recognition, code generation,
+                        problem-solving.</p>
+                </div>
+                <div class="principle">
+                    <div class="principle-icon">🔍</div>
+                    <h4>Stay in the Flow</h4>
+                    <p>Keep conversations focused. Don't switch contexts abruptly. Build momentum.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vibe Coding Workflow -->
+        <section>
+            <h2><span class="emoji">🔄</span> The Vibe Coding Workflow</h2>
+
+            <ol class="workflow-steps">
+                <li>
+                    <strong>Start with a Vision (Not a Plan)</strong>
+                    <p>Describe the outcome you want, the problem you're solving, or the feeling you want to create.
+                        Example: "I want to build a module that discovers and documents data sources automatically"</p>
+                </li>
+
+                <li>
+                    <strong>Have a Conversation</strong>
+                    <p>Talk through the approach with Claude. Ask questions. Explore options. Let Claude suggest
+                        patterns based on your description. This is dialogue, not commands.</p>
+                </li>
+
+                <li>
+                    <strong>Build in Small Steps</strong>
+                    <p>Don't ask for the entire application at once. Build one feature, one component, one piece at a
+                        time. Each step informs the next.</p>
+                </li>
+
+                <li>
+                    <strong>Test Continuously</strong>
+                    <p>Run the code after each meaningful addition. See what works, what breaks, what feels right. Use
+                        `/run` to test the app in real-time.</p>
+                </li>
+
+                <li>
+                    <strong>Refine Based on Reality</strong>
+                    <p>Once you see the code working, ideas become clearer. Refine based on what you actually see, not
+                        what you imagined.</p>
+                </li>
+
+                <li>
+                    <strong>Iterate the Loop</strong>
+                    <p>New feature → Build → Test → Learn → Refine → Next feature. Keep the cycle moving.</p>
+                </li>
+
+                <li>
+                    <strong>Commit Milestones</strong>
+                    <p>After each meaningful chunk (feature, refactor, milestone), commit to git. Don't wait for
+                        perfection.</p>
+                </li>
+
+                <li>
+                    <strong>Share and Celebrate</strong>
+                    <p>Push to GitHub, share progress, get feedback. Vibe coding benefits from external perspectives.
+                    </p>
+                </li>
+            </ol>
+
+            <div class="flow-diagram">Idea → Conversation → Build → Test → Learn → Refine → Repeat ✨
+                ↑ ↓
+                └──────── Continuous Feedback Loop ─────────────┘</div>
+        </section>
+
+        <!-- Example Conversation -->
+        <section>
+            <h2><span class="emoji">💬</span> Example: Vibe Coding a Feature</h2>
+
+            <div class="example-box">
+                <strong>You (Thinking Out Loud):</strong>
+                <p>"I want to create a module that can automatically detect and document data schemas from raw data
+                    files. It should understand the structure, suggest data types, and identify potential issues. I'm
+                    thinking it could be useful for the data platform."</p>
+            </div>
+
+            <div class="example-box">
+                <strong>Claude (Collaborative Response):</strong>
+                <p>"That's a great idea! I see a few approaches: 1) Scan files and infer schema, 2) Use statistical
+                    profiling to detect patterns, 3) Create a validation layer that catches anomalies. Which resonates
+                    most? Or should we start simple and build up?"</p>
+            </div>
+
+            <div class="example-box">
+                <strong>You (Building Momentum):</strong>
+                <p>"Let's start simple - sample a file, infer basic types (string, number, date), and generate a schema.
+                    Then we can add complexity like detecting outliers or suggesting optimizations."</p>
+            </div>
+
+            <div class="example-box">
+                <strong>Claude (Implementation):</strong>
+                <p>[Writes code for basic schema inference]<br><br>"Here's a TypeScript implementation that reads a CSV,
+                    samples rows, infers types. Try running it with your test data."</p>
+            </div>
+
+            <div class="example-box">
+                <strong>You (Testing & Learning):</strong>
+                <p>/run → Test the feature → "It works great for CSV, but JSON structures are complex. What if we added
+                    a JSON parser that recursively infers nested schema?"</p>
+            </div>
+
+            <div class="example-box">
+                <strong>Claude:</strong>
+                <p>[Adds JSON support, handles nesting]<br><br>"Done! Now it handles both CSV and JSON. Notice anything
+                    we should refine?"</p>
+            </div>
+
+            <div class="example-box">
+                <strong>You (Refining):</strong>
+                <p>"The error messages could be clearer. Also, what if we generated documentation alongside the schema?
+                    Like, auto-generate a markdown file describing each column?"</p>
+            </div>
+
+            <div class="example-box">
+                <strong>Claude (Iteration):</strong>
+                <p>[Adds documentation generation, improves errors]<br><br>Feature is now: Schema inference + JSON
+                    support + Auto-documentation. Ready to commit!</p>
+            </div>
+        </section>
+
+        <!-- Best Practices -->
+        <section>
+            <h2><span class="emoji">✅</span> Best Practices</h2>
+
+            <h3>DO ✓</h3>
+            <ul class="checklist">
+                <li>Think out loud and describe your reasoning</li>
+                <li>Build incrementally, test frequently</li>
+                <li>Embrace discovery and learning</li>
+                <li>Ask "why" and "what if" questions</li>
+                <li>Commit progress regularly to git</li>
+                <li>Test features in the real app (/run)</li>
+                <li>Share context and constraints clearly</li>
+                <li>Be specific about what's working and what's not</li>
+                <li>Refactor when patterns emerge</li>
+                <li>Document decisions as you go</li>
+            </ul>
+
+            <h3>DON'T ✗</h3>
+            <ul class="anti-pattern">
+                <li>Ask for the entire application at once</li>
+                <li>Over-specify before trying anything</li>
+                <li>Ignore test failures or warnings</li>
+                <li>Jump between completely different features</li>
+                <li>Skip commits (git checkpoints matter)</li>
+                <li>Go silent when things break</li>
+                <li>Assume architecture without testing</li>
+                <li>Avoid feedback and course correction</li>
+                <li>Build in isolated branches for weeks</li>
+                <li>Plan architecture in a vacuum</li>
+            </ul>
+        </section>
+
+        <!-- Vibe Coding Commands -->
+        <section>
+            <h2><span class="emoji">⚙️</span> Vibe Coding with Claude Code Tools</h2>
+
+            <h3>Essential Commands</h3>
+
+            <div class="card">
+                <strong>/run</strong>
+                <p>The heartbeat of vibe coding. Run the app, see it work, discover what needs fixing. Do this after
+                    every meaningful change.</p>
+            </div>
+
+            <div class="card">
+                <strong>/code-review --level medium</strong>
+                <p>Quick feedback on your code. Use after building features. Helps catch issues early without slowing
+                    momentum.</p>
+            </div>
+
+            <div class="card">
+                <strong>git commit -m "message"</strong>
+                <p>Commit after each feature or significant refactor. Keep history clean and granular.</p>
+            </div>
+
+            <div class="card">
+                <strong>/loop /check-feature</strong>
+                <p>For ongoing tasks: monitor features, run tests periodically, validate data pipelines. Let it run
+                    autonomously.</p>
+            </div>
+
+            <div class="card">
+                <strong>/workflow --graph your-workflow</strong>
+                <p>For complex multi-phase work (like module development), use workflow graphs to orchestrate multiple
+                    agents and steps.</p>
+            </div>
+
+            <div class="card">
+                <strong>claude mem search "pattern"</strong>
+                <p>Learn from past decisions and patterns. Build on previous discoveries. Keep institutional memory.</p>
+            </div>
+        </section>
+
+        <!-- Vibe Coding Patterns -->
+        <section>
+            <h2><span class="emoji">🎨</span> Common Vibe Coding Patterns</h2>
+
+            <h3>Pattern 1: The Iterative Build</h3>
+            <div class="card">
+                <p><strong>Scenario:</strong> Building a new SaaS module<br>
+                    <strong>Approach:</strong> Start with core logic → Add validation → Build UI → Integrate with system
+                    → Optimize<br>
+                    <strong>Vibe:</strong> Each step is a conversation. After each step, test and ask "what's next?"
+                </p>
+            </div>
+
+            <h3>Pattern 2: The Discovery Build</h3>
+            <div class="card">
+                <p><strong>Scenario:</strong> Solving a problem you don't fully understand yet<br>
+                    <strong>Approach:</strong> Build something quickly → Understand the real problem → Rebuild properly
+                    → Iterate<br>
+                    <strong>Vibe:</strong> "Let's prototype first, understand second." Rapid spikes to learn, then real
+                    implementation.
+                </p>
+            </div>
+
+            <h3>Pattern 3: The Feature Factory</h3>
+            <div class="card">
+                <p><strong>Scenario:</strong> Building many similar features (multiple modules, endpoints, etc.)<br>
+                    <strong>Approach:</strong> Build one feature fully → Extract pattern → Generate others → Customize
+                    each<br>
+                    <strong>Vibe:</strong> "Let's build one beautifully, then scale it." One high-quality example, then
+                    variations.
+                </p>
+            </div>
+
+            <h3>Pattern 4: The Refactoring Flow</h3>
+            <div class="card">
+                <p><strong>Scenario:</strong> Code is working but messy<br>
+                    <strong>Approach:</strong> Extract patterns → Simplify → Test → Commit → Document<br>
+                    <strong>Vibe:</strong> "Let's make this elegant." Refactor when you see the shape of the problem
+                    clearly.
+                </p>
+            </div>
+
+            <h3>Pattern 5: The Learning Loop</h3>
+            <div class="card">
+                <p><strong>Scenario:</strong> Building with unfamiliar technology<br>
+                    <strong>Approach:</strong> Small example → Understand concept → Build real feature → Master
+                    pattern<br>
+                    <strong>Vibe:</strong> "Teach me as we build." Learn in context, not in isolation.
+                </p>
+            </div>
+        </section>
+
+        <!-- Vibe vs Structured -->
+        <section>
+            <h2><span class="emoji">⚖️</span> Vibe Coding vs Structured Development</h2>
+
+            <div style="overflow-x: auto;">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Vibe Coding 🎵</th>
+                            <th>Structured Planning 📋</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Planning</strong></td>
+                            <td>Minimal, emerges as you build</td>
+                            <td>Comprehensive upfront design</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Timeline</strong></td>
+                            <td>Unknown, discovery-based</td>
+                            <td>Estimated, fixed scope</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Testing</strong></td>
+                            <td>Continuous, real-time feedback</td>
+                            <td>Phase-based, formal QA</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Flexibility</strong></td>
+                            <td>High, pivot quickly</td>
+                            <td>Low, changes are expensive</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Communication</strong></td>
+                            <td>Conversational with Claude</td>
+                            <td>Formal requirements docs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Risk</strong></td>
+                            <td>Learn and adjust quickly</td>
+                            <td>Mitigate upfront</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Best For</strong></td>
+                            <td>Exploration, startups, features</td>
+                            <td>Large systems, enterprises</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Commitment</strong></td>
+                            <td>Flow with momentum</td>
+                            <td>Follow the plan</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card warning">
+                <strong>Note:</strong> These aren't mutually exclusive. Use <span class="highlight">structured planning
+                    for large systems</span>, <span class="highlight">vibe coding for features and exploration</span>.
+                Many successful projects use both!
+            </div>
+        </section>
+
+        <!-- Handling Challenges -->
+        <section>
+            <h2><span class="emoji">🚀</span> Handling Challenges in Vibe Coding</h2>
+
+            <h3>Challenge 1: "I Lost the Plot"</h3>
+            <div class="card">
+                <strong>Problem:</strong> Too many conversations, unclear where you are<br>
+                <strong>Solution:</strong>
+                <ul class="checklist">
+                    <li>Commit current state to git with clear message</li>
+                    <li>Ask Claude to summarize progress so far</li>
+                    <li>Refocus: "What's the next smallest step?"</li>
+                    <li>Check /run to see actual state of the app</li>
+                </ul>
+            </div>
+
+            <h3>Challenge 2: "Too Many Ideas"</h3>
+            <div class="card">
+                <strong>Problem:</strong> Feature creep, trying to do everything at once<br>
+                <strong>Solution:</strong>
+                <ul class="checklist">
+                    <li>Write ideas down in memory (claude mem save)</li>
+                    <li>Focus on ONE feature to completion</li>
+                    <li>Commit, then move to next</li>
+                    <li>Vibe coding works best with laser focus per cycle</li>
+                </ul>
+            </div>
+
+            <h3>Challenge 3: "Code Quality Sliding"</h3>
+            <div class="card">
+                <strong>Problem:</strong> Moving fast means skipping tests or best practices<br>
+                <strong>Solution:</strong>
+                <ul class="checklist">
+                    <li>Use /code-review --level medium regularly</li>
+                    <li>Commit frequently (forces you to think about modularity)</li>
+                    <li>Run /run after each change (catches bugs early)</li>
+                    <li>Refactor patterns when you see them emerging</li>
+                </ul>
+            </div>
+
+            <h3>Challenge 4: "Stuck on a Problem"</h3>
+            <div class="card">
+                <strong>Problem:</strong> Something isn't working, feels stuck<br>
+                <strong>Solution:</strong>
+                <ul class="checklist">
+                    <li>Step back and describe the actual error/behavior</li>
+                    <li>Test a simpler version (spike approach)</li>
+                    <li>Ask Claude: "What are other ways to solve this?"</li>
+                    <li>Sometimes backing up and trying a different path is faster</li>
+                </ul>
+            </div>
+
+            <h3>Challenge 5: "Collaboration Friction"</h3>
+            <div class="card">
+                <strong>Problem:</strong> Multiple people in the same repo, conflicting changes<br>
+                <strong>Solution:</strong>
+                <ul class="checklist">
+                    <li>Use branches for different features (feature/my-feature)</li>
+                    <li>Commit and push frequently</li>
+                    <li>Communicate: "I'm working on X"</li>
+                    <li>Merge when feature is complete and tested</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Real-World Example -->
+        <section>
+            <h2><span class="emoji">🏗️</span> Real-World Example: Building the SaaS Modules</h2>
+
+            <div class="example-box">
+                <h3>The Vision</h3>
+                <p>"I want to build 53 different SaaS modules, each with a complete SPARC specification, Jira epics, and
+                    documentation. The modules cover everything from authentication to billing."</p>
+            </div>
+
+            <h3>The Vibe Coding Journey</h3>
+
+            <div class="card success">
+                <strong>Phase 1: Discovery Build</strong>
+                <p>Created one module (Authentication) with full SPARC spec. Figured out structure, sections, format.
+                    Tested how it looks.</p>
+            </div>
+
+            <div class="card success">
+                <strong>Phase 2: Pattern Extraction</strong>
+                <p>Identified the pattern: modules have requirements → architecture → dependencies → risks → examples.
+                    Extracted a template.</p>
+            </div>
+
+            <div class="card success">
+                <strong>Phase 3: Feature Factory</strong>
+                <p>Used template to generate remaining 52 modules. Each customized but following proven structure.</p>
+            </div>
+
+            <div class="card success">
+                <strong>Phase 4: Enhancement Loop</strong>
+                <p>Added Jira epic generation. Then auto-documentation. Each feature built iteratively, tested, then
+                    expanded.</p>
+            </div>
+
+            <div class="card success">
+                <strong>Phase 5: Polish & Organize</strong>
+                <p>Created README indexes, organized directories, added cross-references. Made navigation beautiful.</p>
+            </div>
+
+            <p><strong>Result:</strong> 53 complete modules, 100s of Jira stories, comprehensive documentation—all built
+                through vibe coding patterns and iterative discovery.</p>
+        </section>
+
+        <!-- Getting Started -->
+        <section>
+            <h2><span class="emoji">🚀</span> Getting Started with Vibe Coding</h2>
+
+            <ol class="workflow-steps">
+                <li>
+                    <strong>Pick a Feature or Problem</strong>
+                    <p>Something you want to build or explore. Don't overthink it.</p>
+                </li>
+
+                <li>
+                    <strong>Describe It to Claude (Not as a Command)</strong>
+                    <p>"I want to... because... I'm thinking..." → Conversation, not requirements.</p>
+                </li>
+
+                <li>
+                    <strong>Start Small</strong>
+                    <p>"Let's start with the core logic" → Build something that works, then expand.</p>
+                </li>
+
+                <li>
+                    <strong>Test Immediately</strong>
+                    <p>Use /run to see your code working in the real app. This makes vibe coding work.</p>
+                </li>
+
+                <li>
+                    <strong>Iterate Based on Reality</strong>
+                    <p>Once you see it working, ideas get clearer. Refine based on what you see.</p>
+                </li>
+
+                <li>
+                    <strong>Commit Regularly</strong>
+                    <p>After each feature or significant chunk, commit to git. Keep momentum high.</p>
+                </li>
+
+                <li>
+                    <strong>Keep the Conversation Going</strong>
+                    <p>Each message builds on the last. Stay in the flow. Don't jump around.</p>
+                </li>
+            </ol>
+
+            <div class="card success">
+                <strong>Key Insight:</strong> Vibe coding isn't about being disorganized. It's about being responsive
+                and iterative. You organize as you go, test continuously, and let the best design emerge from building
+                something real.
+            </div>
+        </section>
+
+        <!-- Mental Models -->
+        <section>
+            <h2><span class="emoji">🧠</span> Mental Models for Vibe Coding</h2>
+
+            <h3>1. The River, Not the Map</h3>
+            <div class="card">
+                <p>Don't try to plan the entire journey upfront. Wade into the river, feel the current, adjust as you
+                    go. The flow takes you where you need to be.</p>
+            </div>
+
+            <h3>2. Spike → Build → Refactor</h3>
+            <div class="card">
+                <p><strong>Spike:</strong> Quick exploration to understand the problem<br>
+                    <strong>Build:</strong> Real implementation based on learning<br>
+                    <strong>Refactor:</strong> Polish when patterns are clear<br>
+                    This cycle, repeated, is vibe coding.
+                </p>
+            </div>
+
+            <h3>3. Commit-Driven Development</h3>
+            <div class="card">
+                <p>Think of each commit as a checkpoint. "I built X, it works, I'm moving to Y." This keeps momentum and
+                    creates natural stopping points.</p>
+            </div>
+
+            <h3>4. Conversation as Design</h3>
+            <div class="card">
+                <p>The design doesn't live in a document. It lives in the conversation with Claude. Each message refines
+                    understanding and direction.</p>
+            </div>
+
+            <h3>5. Test-Driven Vibes</h3>
+            <div class="card">
+                <p>Not "test-driven development" in the TDD sense. Rather: build → test (via /run) → observe → learn →
+                    refine. Real-time feedback loop.</p>
+            </div>
+        </section>
+
+        <!-- Anti-Patterns to Avoid -->
+        <section>
+            <h2><span class="emoji">⚠️</span> Anti-Patterns to Avoid</h2>
+
+            <div class="card danger">
+                <strong>Anti-Pattern 1: Silent Building</strong>
+                <p>Building for hours without showing Claude what's working/broken. Vibe coding requires constant
+                    dialogue.</p>
+            </div>
+
+            <div class="card danger">
+                <strong>Anti-Pattern 2: Perfectionism</strong>
+                <p>"I'll refactor later." You won't. Refactor patterns as they emerge, not after the fact.</p>
+            </div>
+
+            <div class="card danger">
+                <strong>Anti-Pattern 3: Mega-Commits</strong>
+                <p>One commit with 5,000 lines of new code. Defeats the purpose. Small, frequent commits keep momentum
+                    and clarity.</p>
+            </div>
+
+            <div class="card danger">
+                <strong>Anti-Pattern 4: Planning Without Building</strong>
+                <p>Making detailed plans without validating with code. Plans change when you build. Design through
+                    building.</p>
+            </div>
+
+            <div class="card danger">
+                <strong>Anti-Pattern 5: Ignoring Feedback</strong>
+                <p>Dismissing errors, warnings, or Claude's suggestions. Vibe coding thrives on feedback loops.</p>
+            </div>
+
+            <div class="card danger">
+                <strong>Anti-Pattern 6: Feature Creep</strong>
+                <p>Adding features mid-build. Finish one thing, then start next. Separate concerns, separate commits.
+                </p>
+            </div>
+        </section>
+
+        <!-- Tools for Vibe Coding -->
+        <section>
+            <h2><span class="emoji">🛠️</span> Your Vibe Coding Toolkit</h2>
+
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <strong>📝 Git & Commits</strong>
+                    <p>Checkpoint your progress. Tell the story of building through commit messages.</p>
+                </div>
+
+                <div class="feature-item">
+                    <strong>/run</strong>
+                    <p>See your code working. The reality check. Do this after every meaningful change.</p>
+                </div>
+
+                <div class="feature-item">
+                    <strong>/code-review</strong>
+                    <p>Quick feedback on quality without slowing momentum. Medium level is perfect for vibe coding.</p>
+                </div>
+
+                <div class="feature-item">
+                    <strong>claude mem</strong>
+                    <p>Remember patterns, decisions, insights. Build on your own previous learning.</p>
+                </div>
+
+                <div class="feature-item">
+                    <strong>Keybindings</strong>
+                    <p>Set up keyboard shortcuts for your most-used commands. Speed up iteration.</p>
+                </div>
+
+                <div class="feature-item">
+                    <strong>/loop</strong>
+                    <p>Autonomous checking and monitoring. Let things run while you're in the flow.</p>
+                </div>
+
+                <div class="feature-item">
+                    <strong>Workflows</strong>
+                    <p>For complex multi-phase work. Orchestrate multiple agents working together.</p>
+                </div>
+
+                <div class="feature-item">
+                    <strong>Terminal & Bash</strong>
+                    <p>Direct access to your tools. Sometimes the fastest path is just running a command.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Wisdom -->
+        <section>
+            <h2><span class="emoji">💫</span> The Heart of Vibe Coding</h2>
+
+            <div class="card success">
+                <p><strong>Vibe coding is about flow.</strong></p>
+                <p>It's the difference between making a video game where you have to find the path and write down
+                    directions, versus playing the game, discovering the path as you go, and figuring out where you're
+                    headed through exploration.</p>
+                <p>It's collaboration with an AI that understands code, context, and intent. It's fast iteration. It's
+                    learning by building. It's architecture emerging from implementation.</p>
+                <p><strong>Most importantly: it works.</strong></p>
+                <p>You can build real, complex, beautiful applications this way. Not despite skipping the upfront
+                    planning, but often <em>because</em> you skip it and let the design emerge through conversation and
+                    iteration.</p>
+            </div>
+
+            <h3>Remember</h3>
+            <ul class="checklist">
+                <li>Think out loud, not in commands</li>
+                <li>Build small, test often, commit frequently</li>
+                <li>Let architecture emerge from building</li>
+                <li>Stay in the flow—don't break momentum</li>
+                <li>Real feedback beats theoretical planning</li>
+                <li>You and Claude are a team, not user and tool</li>
+                <li>Done is better than perfect (but keep quality high)</li>
+            </ul>
+
+            <p style="text-align: center; margin-top: 3rem; font-size: 1.2rem;">✨ Now go vibe. Build something
+                beautiful. 🚀</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Vibe Coding Guide | Built with Flow | Last Updated: 2026-08-24</p>
+        <p>Part of the SaaS Foundation Claude Code Configuration</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeToggle();
+        }
+
+        function updateThemeToggle() {
+            const html = document.documentElement;
+            const theme = html.getAttribute('data-theme');
+            const toggle = document.querySelector('.theme-toggle');
+            toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+
+        // Initialize theme from localStorage
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateThemeToggle();
+    </script>
+</body>
+
+</html>
