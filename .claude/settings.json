@@ -175,6 +175,31 @@
     "claude-mem": {
       "enabled": true,
       "description": "Memory and knowledge management"
+    },
+    "github": {
+      "enabled": true,
+      "command": "mcp-github",
+      "description": "GitHub MCP Server - Repository management, issues, PRs"
+    },
+    "typescript-lsp": {
+      "enabled": true,
+      "command": "typescript-language-server",
+      "description": "TypeScript Language Server Protocol"
+    },
+    "rust-lsp": {
+      "enabled": true,
+      "command": "rust-analyzer",
+      "description": "Rust Language Server Protocol"
+    },
+    "local-review": {
+      "enabled": true,
+      "command": "mcp-local-review",
+      "description": "Local code review and analysis"
+    },
+    "playwright": {
+      "enabled": true,
+      "command": "mcp-playwright",
+      "description": "Playwright testing automation"
     }
   },
 
@@ -184,6 +209,70 @@
       "config": {
         "auto-save": true,
         "max-memories": 5000
+      }
+    },
+    "security-review": {
+      "enabled": true,
+      "config": {
+        "auto-check": true,
+        "level": "medium"
+      }
+    },
+    "typescript-lsp": {
+      "enabled": true,
+      "config": {
+        "auto-check": true,
+        "strict-mode": true
+      }
+    },
+    "rust-lsp": {
+      "enabled": true,
+      "config": {
+        "auto-check": true
+      }
+    },
+    "local-review": {
+      "enabled": true,
+      "config": {
+        "auto-review": true,
+        "level": "quick"
+      }
+    },
+    "codeex": {
+      "enabled": true,
+      "config": {
+        "enabled": true
+      }
+    },
+    "superpowers": {
+      "enabled": true,
+      "config": {
+        "features": "all"
+      }
+    },
+    "feature-dev": {
+      "enabled": true,
+      "config": {
+        "mode": "active"
+      }
+    },
+    "frontend-design": {
+      "enabled": true,
+      "config": {
+        "enabled": true
+      }
+    },
+    "playwright": {
+      "enabled": true,
+      "config": {
+        "headless": true,
+        "auto-launch": false
+      }
+    },
+    "github": {
+      "enabled": true,
+      "config": {
+        "auto-sync": true
       }
     }
   },

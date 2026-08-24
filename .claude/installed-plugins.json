@@ -1,0 +1,92 @@
+{
+  "installed_plugins": [
+    {
+      "name": "security-review",
+      "type": "skill",
+      "status": "enabled",
+      "description": "Security vulnerability detection and guidance",
+      "trigger": "/security-review",
+      "installation_date": "2026-08-24"
+    },
+    {
+      "name": "typescript-lsp",
+      "type": "lsp",
+      "status": "enabled",
+      "description": "TypeScript Language Server Protocol for type checking",
+      "language": "typescript",
+      "installation_date": "2026-08-24"
+    },
+    {
+      "name": "rust-lsp",
+      "type": "lsp",
+      "status": "enabled",
+      "description": "Rust Language Server Protocol (rust-analyzer)",
+      "language": "rust",
+      "installation_date": "2026-08-24"
+    },
+    {
+      "name": "local-review",
+      "type": "plugin",
+      "status": "enabled",
+      "description": "Local code review and analysis tool",
+      "trigger": "/local-review",
+      "installation_date": "2026-08-24"
+    },
+    {
+      "name": "codeex",
+      "type": "plugin",
+      "status": "enabled",
+      "description": "Code execution and experimentation tool",
+      "installation_date": "2026-08-24"
+    },
+    {
+      "name": "claude-mem",
+      "type": "mcp-plugin",
+      "status": "enabled",
+      "description": "Memory and knowledge management system",
+      "trigger": "claude mem search",
+      "installation_date": "2026-08-24"
+    },
+    {
+      "name": "superpowers",
+      "type": "plugin",
+      "status": "enabled",
+      "description": "Enhanced Claude Code capabilities and superpowers",
+      "installation_date": "2026-08-24"
+    },
+    {
+      "name": "feature-dev",
+      "type": "plugin",
+      "status": "enabled",
+      "description": "Feature development workflow and scaffolding",
+      "installation_date": "2026-08-24"
+    },
+    {
+      "name": "frontend-design",
+      "type": "plugin",
+      "status": "enabled",
+      "description": "Frontend design and UI component tools",
+      "installation_date": "2026-08-24"
+    },
+    {
+      "name": "playwright",
+      "type": "mcp-server",
+      "status": "enabled",
+      "description": "Playwright testing and browser automation",
+      "languages": ["typescript", "javascript", "python"],
+      "installation_date": "2026-08-24"
+    },
+    {
+      "name": "github",
+      "type": "mcp-server",
+      "status": "enabled",
+      "description": "GitHub MCP Server for repository operations",
+      "features": ["repos", "issues", "prs", "actions"],
+      "installation_date": "2026-08-24"
+    }
+  ],
+  "total_installed": 11,
+  "status": "complete",
+  "configuration_file": ".claude/settings.json",
+  "last_updated": "2026-08-24T15:45:00Z"
+}
