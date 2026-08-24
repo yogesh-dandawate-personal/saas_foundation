@@ -1,10 +1,234 @@
 {
+  "version": "2.0",
+  "description": "Comprehensive Claude Code Configuration for Multi-Disciplinary SaaS and Data Engineering",
+
+  "model": {
+    "default": "claude-haiku-4-5-20251001",
+    "reasoning-effort": "medium",
+    "temperature": 0.8,
+    "max-tokens": 8096,
+    "overrides": {
+      "code-review": "claude-opus-5",
+      "architecture-planning": "claude-opus-5",
+      "data-pipeline-design": "claude-sonnet-5",
+      "quick-tasks": "claude-haiku-4-5-20251001"
+    }
+  },
+
   "permissions": {
     "allow": [
-      "Bash(python3 /private/tmp/claude-501/-Users-yogesh-1-Code-Personal-saas-foundation/f78922ef-e19a-4b5e-8da6-ddd736b0f117/scratchpad/create_modules.py)",
-      "Bash(python3 /private/tmp/claude-501/-Users-yogesh-1-Code-Personal-saas-foundation/f78922ef-e19a-4b5e-8da6-ddd736b0f117/scratchpad/generate_sparc_modules.py)",
-      "Bash(python3 /private/tmp/claude-501/-Users-yogesh-1-Code-Personal-saas-foundation/f78922ef-e19a-4b5e-8da6-ddd736b0f117/scratchpad/generate_all_modules.py)",
-      "Bash(claude --version)"
+      "Bash(git *)",
+      "Bash(npm *)",
+      "Bash(yarn *)",
+      "Bash(python*)",
+      "Bash(docker*)",
+      "Bash(node *)",
+      "Bash(cd *)",
+      "Bash(ls *)",
+      "Bash(find *)",
+      "Bash(grep *)",
+      "Bash(echo *)",
+      "Bash(cat *)",
+      "Bash(head *)",
+      "Bash(tail *)"
     ]
+  },
+
+  "hooks": {
+    "pre-commit": {
+      "stage": "pre-commit-quality-check",
+      "enabled": true,
+      "commands": [
+        "echo 'Running pre-commit checks...'",
+        "echo 'Checks completed'"
+      ]
+    },
+    "post-commit": {
+      "stage": "post-commit-hooks",
+      "enabled": false
+    },
+    "pre-push": {
+      "stage": "pre-push-validation",
+      "enabled": false
+    }
+  },
+
+  "workflows": {
+    "auto-save": true,
+    "save-interval": "5m",
+    "max-concurrent-agents": 10,
+    "budget": {
+      "enabled": false,
+      "tokens": null
+    }
+  },
+
+  "loops": {
+    "auto-save": true,
+    "default-interval": "5m",
+    "max-idle-duration": "1h",
+    "fallback-check-interval": "1200s"
+  },
+
+  "memory": {
+    "enabled": true,
+    "auto-save": true,
+    "max-memories": 5000,
+    "cleanup-interval": "7d",
+    "types": {
+      "user": true,
+      "feedback": true,
+      "project": true,
+      "reference": true
+    }
+  },
+
+  "mcpServers": {
+    "claude-mem": {
+      "enabled": true,
+      "description": "Memory and knowledge management"
+    }
+  },
+
+  "plugins": {
+    "claude-mem": {
+      "enabled": true,
+      "config": {
+        "auto-save": true,
+        "max-memories": 5000
+      }
+    }
+  },
+
+  "logging": {
+    "level": "info",
+    "format": "json",
+    "output": {
+      "console": true,
+      "files": true,
+      "remote": false
+    },
+    "rotation": {
+      "max-size": "100MB",
+      "max-files": 10,
+      "retention": "30d"
+    },
+    "components": {
+      "claude": "info",
+      "workflows": "info",
+      "hooks": "info",
+      "loops": "info",
+      "mcp": "warn",
+      "memory": "info",
+      "agents": "info"
+    }
+  },
+
+  "agents": {
+    "default-type": "general-purpose",
+    "timeout": "30m",
+    "max-retries": 3,
+    "error-recovery": "exponential-backoff"
+  },
+
+  "skills": {
+    "auto-load": true,
+    "timeout": "10m"
+  },
+
+  "commands": {
+    "auto-complete": true,
+    "history-limit": 1000
+  },
+
+  "git": {
+    "auto-commit-messages": true,
+    "require-signed-commits": false,
+    "branch-prefix": "feature/",
+    "main-branches": ["main", "master"]
+  },
+
+  "editor": {
+    "format-on-save": true,
+    "lint-on-save": false,
+    "auto-complete": true,
+    "theme": "system"
+  },
+
+  "terminal": {
+    "width": 120,
+    "theme": "system",
+    "history": 1000
+  },
+
+  "performance": {
+    "cache-enabled": true,
+    "cache-ttl": "1h",
+    "prefetch": true,
+    "lazy-load": true
+  },
+
+  "security": {
+    "verify-mcp-servers": true,
+    "require-https": true,
+    "secret-detection": true,
+    "auto-redact-logs": true
+  },
+
+  "saas-development": {
+    "module-documentation": {
+      "format": "sparc",
+      "validation": "auto",
+      "auto-indexing": true
+    },
+    "epic-management": {
+      "jira-sync": true,
+      "auto-create-stories": true
+    },
+    "documentation-standards": {
+      "sections": [
+        "overview",
+        "requirements",
+        "architecture",
+        "dependencies",
+        "risks",
+        "examples"
+      ]
+    }
+  },
+
+  "data-engineering": {
+    "schema-validation": {
+      "auto-check": true,
+      "backwards-compatibility": true
+    },
+    "pipeline-monitoring": {
+      "enabled": true,
+      "check-interval": "30m"
+    },
+    "quality-rules": {
+      "completeness": 100,
+      "uniqueness": 100,
+      "timeliness": 100
+    }
+  },
+
+  "rules": {
+    "enabled": true,
+    "strict-mode": false,
+    "auto-fix": true,
+    "audit-trail": true
+  },
+
+  "notifications": {
+    "enabled": true,
+    "channels": ["console"],
+    "levels": ["error", "warn"],
+    "quiet-hours": false
+  },
+
+  "environment": {
+    "NODE_ENV": "development",
+    "DEBUG": false
   }
 }

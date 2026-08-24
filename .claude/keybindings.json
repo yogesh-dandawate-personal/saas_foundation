@@ -1,0 +1,355 @@
+{
+  "version": "1.0",
+  "description": "Custom keyboard bindings for Claude Code workflows",
+
+  "keybindings": [
+    {
+      "key": "cmd+shift+r",
+      "command": "/code-review --level medium",
+      "description": "Quick code review (medium level)",
+      "when": "editorActive"
+    },
+    {
+      "key": "cmd+shift+t",
+      "command": "/run",
+      "description": "Run/test current project",
+      "when": "editorActive || terminalActive"
+    },
+    {
+      "key": "cmd+shift+d",
+      "command": "/design",
+      "description": "Open design canvas",
+      "when": "editorActive"
+    },
+    {
+      "key": "cmd+shift+g",
+      "command": "/workflow-viz",
+      "description": "Visualize workflow graph",
+      "when": "editorActive"
+    },
+    {
+      "key": "cmd+shift+m",
+      "command": "/module-spec",
+      "description": "Generate module specification",
+      "when": "fileActive && path matches 01_docs"
+    },
+    {
+      "key": "cmd+shift+e",
+      "command": "/epic-sync",
+      "description": "Sync epics with modules",
+      "when": "fileActive && path matches jira"
+    },
+    {
+      "key": "cmd+shift+p",
+      "command": "/pipeline-check",
+      "description": "Validate data pipeline",
+      "when": "fileActive && path matches pipelines"
+    },
+    {
+      "key": "cmd+shift+l",
+      "command": "claude loop",
+      "description": "Manage loops",
+      "when": "terminalActive"
+    },
+    {
+      "key": "cmd+shift+s",
+      "command": "/simplify",
+      "description": "Simplify code",
+      "when": "editorActive && hasSelection"
+    },
+    {
+      "key": "cmd+shift+c",
+      "command": "/claude-code-guide",
+      "description": "Claude Code help",
+      "when": "always"
+    },
+    {
+      "key": "cmd+k cmd+r",
+      "command": "/code-review --level high",
+      "description": "Deep code review (high level)",
+      "when": "editorActive",
+      "chord": true
+    },
+    {
+      "key": "cmd+k cmd+u",
+      "command": "/code-review --level ultra",
+      "description": "Ultra code review (cloud)",
+      "when": "editorActive",
+      "chord": true
+    },
+    {
+      "key": "cmd+k cmd+w",
+      "command": "/workflow --list",
+      "description": "List workflows",
+      "when": "terminalActive",
+      "chord": true
+    },
+    {
+      "key": "cmd+k cmd+l",
+      "command": "tail -f .claude/logs/claude.log",
+      "description": "View main logs",
+      "when": "terminalActive",
+      "chord": true
+    },
+    {
+      "key": "cmd+k cmd+m",
+      "command": "claude mem search",
+      "description": "Search memory",
+      "when": "terminalActive",
+      "chord": true
+    },
+    {
+      "key": "cmd+k cmd+a",
+      "command": "/loop list",
+      "description": "List active loops",
+      "when": "terminalActive",
+      "chord": true
+    },
+    {
+      "key": "cmd+k cmd+g",
+      "command": "git status",
+      "description": "Git status",
+      "when": "terminalActive",
+      "chord": true
+    },
+    {
+      "key": "ctrl+cmd+s",
+      "command": "claude save-session",
+      "description": "Save session state",
+      "when": "always"
+    },
+    {
+      "key": "ctrl+cmd+l",
+      "command": "claude clear-logs --older-than 7d",
+      "description": "Clean old logs",
+      "when": "terminalActive"
+    },
+    {
+      "key": "shift+cmd+?",
+      "command": "/help",
+      "description": "Claude Code help",
+      "when": "always"
+    },
+    {
+      "key": "cmd+shift+f",
+      "command": "/smart-explore --medium",
+      "description": "Explore codebase (medium)",
+      "when": "editorActive",
+      "skill": "claude-mem:smart-explore"
+    },
+    {
+      "key": "cmd+shift+n",
+      "command": "/loop",
+      "description": "Start autonomous loop",
+      "when": "terminalActive"
+    },
+    {
+      "key": "cmd+shift+q",
+      "command": "/schedule",
+      "description": "Schedule workflow",
+      "when": "terminalActive"
+    }
+  ],
+
+  "chordBindings": {
+    "description": "Multi-key chord sequences for complex commands",
+    "sequences": [
+      {
+        "keys": ["cmd+k", "cmd+r"],
+        "command": "/code-review --level high",
+        "description": "Deep code review"
+      },
+      {
+        "keys": ["cmd+k", "cmd+u"],
+        "command": "/code-review --level ultra",
+        "description": "Ultra code review"
+      },
+      {
+        "keys": ["cmd+k", "cmd+w"],
+        "command": "/workflow --list",
+        "description": "List workflows"
+      },
+      {
+        "keys": ["cmd+k", "cmd+l"],
+        "command": "tail -f .claude/logs/claude.log",
+        "description": "View logs"
+      },
+      {
+        "keys": ["cmd+k", "cmd+m"],
+        "command": "claude mem search",
+        "description": "Search memory"
+      },
+      {
+        "keys": ["cmd+k", "cmd+a"],
+        "command": "/loop list",
+        "description": "List loops"
+      },
+      {
+        "keys": ["cmd+k", "cmd+g"],
+        "command": "git status",
+        "description": "Git status"
+      }
+    ]
+  },
+
+  "contextSpecific": {
+    "markdown": [
+      {
+        "key": "cmd+shift+v",
+        "command": "/doc-sync",
+        "description": "Sync documentation"
+      }
+    ],
+    "typescript": [
+      {
+        "key": "cmd+shift+t",
+        "command": "npm test",
+        "description": "Run tests"
+      },
+      {
+        "key": "cmd+shift+b",
+        "command": "npm run build",
+        "description": "Build project"
+      }
+    ],
+    "sql": [
+      {
+        "key": "cmd+shift+v",
+        "command": "/schema-validate",
+        "description": "Validate schema"
+      },
+      {
+        "key": "cmd+shift+e",
+        "command": "/query-explain",
+        "description": "Explain query"
+      }
+    ],
+    "python": [
+      {
+        "key": "cmd+shift+t",
+        "command": "pytest",
+        "description": "Run tests"
+      },
+      {
+        "key": "cmd+shift+l",
+        "command": "pylint",
+        "description": "Lint code"
+      }
+    ]
+  },
+
+  "disabled": [
+    {
+      "key": "cmd+b",
+      "reason": "Using for custom command"
+    }
+  ],
+
+  "customMacros": [
+    {
+      "name": "quick-review-and-fix",
+      "keys": ["cmd+shift+f"],
+      "sequence": [
+        "/code-review --level medium",
+        "/simplify",
+        "git add .",
+        "git commit -m 'code review and simplification'"
+      ],
+      "description": "Review, simplify, and commit"
+    },
+    {
+      "name": "module-workflow",
+      "keys": ["cmd+shift+w"],
+      "sequence": [
+        "/module-spec",
+        "/epic-sync",
+        "git add .",
+        "git commit -m 'module update and epic sync'"
+      ],
+      "description": "Complete module workflow"
+    },
+    {
+      "name": "pipeline-validation",
+      "keys": ["cmd+shift+v"],
+      "sequence": [
+        "/pipeline-check --validate",
+        "/quality-check",
+        "git add .",
+        "git commit -m 'pipeline validation'"
+      ],
+      "description": "Validate pipeline and quality"
+    }
+  ],
+
+  "searchAndNav": {
+    "search-command-palette": {
+      "key": "cmd+shift+x",
+      "description": "Search command palette"
+    },
+    "search-files": {
+      "key": "cmd+p",
+      "description": "Quick file search"
+    },
+    "search-symbols": {
+      "key": "cmd+shift+o",
+      "description": "Search symbols"
+    },
+    "search-memory": {
+      "key": "cmd+shift+m",
+      "description": "Search memory"
+    }
+  },
+
+  "navigation": {
+    "next-error": {
+      "key": "f8",
+      "description": "Go to next error"
+    },
+    "prev-error": {
+      "key": "shift+f8",
+      "description": "Go to previous error"
+    },
+    "go-to-definition": {
+      "key": "cmd+click",
+      "description": "Go to definition"
+    },
+    "go-to-line": {
+      "key": "cmd+g",
+      "description": "Go to line"
+    }
+  },
+
+  "editing": {
+    "format-document": {
+      "key": "shift+option+f",
+      "description": "Format document"
+    },
+    "toggle-comment": {
+      "key": "cmd+/",
+      "description": "Toggle comment"
+    },
+    "select-word": {
+      "key": "cmd+d",
+      "description": "Select current word"
+    },
+    "expand-selection": {
+      "key": "shift+cmd+right",
+      "description": "Expand selection"
+    }
+  },
+
+  "notes": {
+    "how-to-use": "1. Open ~/.claude/keybindings.json\n2. Modify key bindings as needed\n3. Changes apply immediately\n4. Use 'cmd+k cmd+?' for help",
+    "common-modifiers": {
+      "cmd": "Command (Mac) / Ctrl (Linux/Windows)",
+      "ctrl": "Control",
+      "shift": "Shift",
+      "option": "Option (Mac) / Alt (Linux/Windows)"
+    },
+    "special-keys": {
+      "when": "Context condition (editorActive, terminalActive, etc.)",
+      "chord": "Multi-key sequence (press first, then second)",
+      "skill": "Invoke skill with keybinding"
+    }
+  }
+}
