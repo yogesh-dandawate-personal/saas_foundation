@@ -274,6 +274,96 @@
       "config": {
         "auto-sync": true
       }
+    },
+    "design-system-enforcer": {
+      "enabled": true,
+      "config": {
+        "strict": true,
+        "check-tokens": true,
+        "check-components": true
+      }
+    },
+    "a11y-validator": {
+      "enabled": true,
+      "config": {
+        "wcag-level": "aa",
+        "auto-fix": true,
+        "report-format": "detailed"
+      }
+    },
+    "component-quality-inspector": {
+      "enabled": true,
+      "config": {
+        "quality-check": true,
+        "reusability-score": true,
+        "pattern-detection": true
+      }
+    },
+    "typography-auditor": {
+      "enabled": true,
+      "config": {
+        "check-scale": true,
+        "check-spacing": true,
+        "check-hierarchy": true
+      }
+    },
+    "responsive-validator": {
+      "enabled": true,
+      "config": {
+        "mobile-first": true,
+        "check-breakpoints": true,
+        "touch-targets": true
+      }
+    },
+    "ux-patterns-auditor": {
+      "enabled": true,
+      "config": {
+        "check-patterns": true,
+        "check-interactions": true,
+        "best-practices": true
+      }
+    },
+    "visual-quality-checker": {
+      "enabled": true,
+      "config": {
+        "alignment": true,
+        "shadows": true,
+        "colors": true,
+        "polish-scoring": true
+      }
+    },
+    "performance-auditor": {
+      "enabled": true,
+      "config": {
+        "check-renders": true,
+        "check-bundle": true,
+        "check-metrics": true
+      }
+    },
+    "storybook-checker": {
+      "enabled": true,
+      "config": {
+        "completeness": true,
+        "coverage": true,
+        "examples": true
+      }
+    },
+    "visual-regression-tester": {
+      "enabled": true,
+      "config": {
+        "baseline": true,
+        "threshold": 0.01,
+        "ci-integration": true
+      }
+    },
+    "interaction-tester": {
+      "enabled": true,
+      "config": {
+        "hover-states": true,
+        "focus-management": true,
+        "animations": true,
+        "keyboard-nav": true
+      }
     }
   },
 
