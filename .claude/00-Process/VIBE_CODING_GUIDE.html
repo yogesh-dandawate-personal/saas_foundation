@@ -13,12 +13,16 @@
         }
 
         :root {
-            --primary: #6366f1;
-            --primary-light: #818cf8;
-            --primary-dark: #4f46e5;
+            /* Teal and Red Color Scheme - Anti-Slop Quality */
+            --primary: #0d9488;
+            --primary-light: #14b8a6;
+            --primary-dark: #0f766e;
+            --accent: #dc2626;
+            --accent-light: #ef4444;
+            --accent-dark: #991b1b;
             --success: #10b981;
             --warning: #f59e0b;
-            --danger: #ef4444;
+            --danger: #dc2626;
             --bg: #f8fafc;
             --surface: #ffffff;
             --text: #1e293b;
@@ -58,7 +62,7 @@
         h1 {
             font-size: 3rem;
             margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            background: linear-gradient(135deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -103,7 +107,7 @@
         }
 
         .card {
-            background: linear-gradient(135deg, var(--surface), rgba(99, 102, 241, 0.05));
+            background: linear-gradient(135deg, var(--surface), rgba(13, 148, 136, 0.05));
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 1.5rem;
@@ -111,7 +115,7 @@
         }
 
         .card.success {
-            border-left: 4px solid var(--success);
+            border-left: 4px solid var(--primary);
         }
 
         .card.warning {
@@ -119,11 +123,11 @@
         }
 
         .card.danger {
-            border-left: 4px solid var(--danger);
+            border-left: 4px solid var(--accent);
         }
 
         .flow-diagram {
-            background: rgba(99, 102, 241, 0.1);
+            background: rgba(13, 148, 136, 0.1);
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 2rem;
@@ -136,7 +140,7 @@
 
         .code-block {
             background: rgba(0, 0, 0, 0.05);
-            border-left: 4px solid var(--primary);
+            border-left: 4px solid var(--accent);
             padding: 1rem;
             margin: 1rem 0;
             border-radius: 4px;
@@ -167,7 +171,7 @@
         .principle:hover {
             border-color: var(--primary);
             transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
+            box-shadow: 0 10px 30px rgba(13, 148, 136, 0.1);
         }
 
         .principle-icon {
@@ -189,7 +193,7 @@
             counter-increment: step-counter;
             margin: 2rem 0;
             padding: 1.5rem;
-            background: linear-gradient(90deg, rgba(99, 102, 241, 0.1), transparent);
+            background: linear-gradient(90deg, rgba(13, 148, 136, 0.1), transparent);
             border-radius: 8px;
             border-left: 4px solid var(--primary);
             position: relative;
@@ -265,18 +269,18 @@
         }
 
         .comparison-table th {
-            background: rgba(99, 102, 241, 0.1);
+            background: rgba(13, 148, 136, 0.1);
             font-weight: 600;
             color: var(--primary-dark);
         }
 
         .comparison-table tr:hover {
-            background: rgba(99, 102, 241, 0.05);
+            background: rgba(13, 148, 136, 0.05);
         }
 
         .example-box {
             background: var(--surface);
-            border: 2px dashed var(--primary);
+            border: 2px dashed var(--accent);
             border-radius: 8px;
             padding: 1.5rem;
             margin: 1.5rem 0;
@@ -290,7 +294,7 @@
         }
 
         .feature-item {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), transparent);
+            background: linear-gradient(135deg, rgba(13, 148, 136, 0.1), transparent);
             border: 1px solid var(--border);
             border-radius: 6px;
             padding: 1rem;
@@ -332,10 +336,11 @@
         }
 
         .highlight {
-            background: rgba(245, 158, 11, 0.2);
+            background: rgba(220, 38, 38, 0.15);
             padding: 0.2em 0.4em;
             border-radius: 3px;
             font-weight: 500;
+            color: var(--accent-dark);
         }
 
         @media (max-width: 768px) {
