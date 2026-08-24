@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 /private/tmp/claude-501/-Users-yogesh-1-Code-Personal-saas-foundation/f78922ef-e19a-4b5e-8da6-ddd736b0f117/scratchpad/create_modules.py)",
+      "Bash(python3 /private/tmp/claude-501/-Users-yogesh-1-Code-Personal-saas-foundation/f78922ef-e19a-4b5e-8da6-ddd736b0f117/scratchpad/generate_sparc_modules.py)",
+      "Bash(python3 /private/tmp/claude-501/-Users-yogesh-1-Code-Personal-saas-foundation/f78922ef-e19a-4b5e-8da6-ddd736b0f117/scratchpad/generate_all_modules.py)",
+      "Bash(claude --version)"
+    ]
+  }
+}

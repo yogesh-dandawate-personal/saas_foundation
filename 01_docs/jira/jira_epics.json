@@ -1,0 +1,1124 @@
+{
+  "issues": [
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "01 \u2014 Authentication and Identity",
+        "description": "Module 01: Authentication and Identity\n\nDomain: A \u2014 SaaS Foundation\nDelivery Priority: P0\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Highest"
+        },
+        "labels": [
+          "module-01",
+          "domain-A",
+          "priority-P0"
+        ],
+        "customfield_10000": "Module 01"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "02 \u2014 Tenant Management",
+        "description": "Module 02: Tenant Management\n\nDomain: A \u2014 SaaS Foundation\nDelivery Priority: P0\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Highest"
+        },
+        "labels": [
+          "module-02",
+          "domain-A",
+          "priority-P0"
+        ],
+        "customfield_10000": "Module 02"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "03 \u2014 Organization Management",
+        "description": "Module 03: Organization Management\n\nDomain: A \u2014 SaaS Foundation\nDelivery Priority: P0\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Highest"
+        },
+        "labels": [
+          "module-03",
+          "domain-A",
+          "priority-P0"
+        ],
+        "customfield_10000": "Module 03"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "04 \u2014 User Management",
+        "description": "Module 04: User Management\n\nDomain: A \u2014 SaaS Foundation\nDelivery Priority: P0\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Highest"
+        },
+        "labels": [
+          "module-04",
+          "domain-A",
+          "priority-P0"
+        ],
+        "customfield_10000": "Module 04"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "05 \u2014 Roles, Personas and Groups",
+        "description": "Module 05: Roles, Personas and Groups\n\nDomain: A \u2014 SaaS Foundation\nDelivery Priority: P0\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Highest"
+        },
+        "labels": [
+          "module-05",
+          "domain-A",
+          "priority-P0"
+        ],
+        "customfield_10000": "Module 05"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "06 \u2014 Application Management",
+        "description": "Module 06: Application Management\n\nDomain: A \u2014 SaaS Foundation\nDelivery Priority: P0\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Highest"
+        },
+        "labels": [
+          "module-06",
+          "domain-A",
+          "priority-P0"
+        ],
+        "customfield_10000": "Module 06"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "07 \u2014 Subscription, Plans and Entitlements",
+        "description": "Module 07: Subscription, Plans and Entitlements\n\nDomain: A \u2014 SaaS Foundation\nDelivery Priority: P0\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Highest"
+        },
+        "labels": [
+          "module-07",
+          "domain-A",
+          "priority-P0"
+        ],
+        "customfield_10000": "Module 07"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "08 \u2014 Dashboard Management",
+        "description": "Module 08: Dashboard Management\n\nDomain: B \u2014 Dashboards, Reports and Performance\nDelivery Priority: P3\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Medium"
+        },
+        "labels": [
+          "module-08",
+          "domain-B",
+          "priority-P3"
+        ],
+        "customfield_10000": "Module 08"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "09 \u2014 Report Management",
+        "description": "Module 09: Report Management\n\nDomain: B \u2014 Dashboards, Reports and Performance\nDelivery Priority: P3\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Medium"
+        },
+        "labels": [
+          "module-09",
+          "domain-B",
+          "priority-P3"
+        ],
+        "customfield_10000": "Module 09"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "10 \u2014 KPI, KRA and Performance Management",
+        "description": "Module 10: KPI, KRA and Performance Management\n\nDomain: B \u2014 Dashboards, Reports and Performance\nDelivery Priority: P3\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Medium"
+        },
+        "labels": [
+          "module-10",
+          "domain-B",
+          "priority-P3"
+        ],
+        "customfield_10000": "Module 10"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "11 \u2014 Analytics and Scenario Management",
+        "description": "Module 11: Analytics and Scenario Management\n\nDomain: B \u2014 Dashboards, Reports and Performance\nDelivery Priority: P3\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Medium"
+        },
+        "labels": [
+          "module-11",
+          "domain-B",
+          "priority-P3"
+        ],
+        "customfield_10000": "Module 11"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "12 \u2014 Source and Connector Management",
+        "description": "Module 12: Source and Connector Management\n\nDomain: C \u2014 Enterprise Data Foundation\nDelivery Priority: P1\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-12",
+          "domain-C",
+          "priority-P1"
+        ],
+        "customfield_10000": "Module 12"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "13 \u2014 Data Pipeline Management",
+        "description": "Module 13: Data Pipeline Management\n\nDomain: C \u2014 Enterprise Data Foundation\nDelivery Priority: P1\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-13",
+          "domain-C",
+          "priority-P1"
+        ],
+        "customfield_10000": "Module 13"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "14 \u2014 Lakehouse Management",
+        "description": "Module 14: Lakehouse Management\n\nDomain: C \u2014 Enterprise Data Foundation\nDelivery Priority: P1\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-14",
+          "domain-C",
+          "priority-P1"
+        ],
+        "customfield_10000": "Module 14"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "15 \u2014 Data Catalogue",
+        "description": "Module 15: Data Catalogue\n\nDomain: C \u2014 Enterprise Data Foundation\nDelivery Priority: P1\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-15",
+          "domain-C",
+          "priority-P1"
+        ],
+        "customfield_10000": "Module 15"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "16 \u2014 Data Quality",
+        "description": "Module 16: Data Quality\n\nDomain: C \u2014 Enterprise Data Foundation\nDelivery Priority: P1\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-16",
+          "domain-C",
+          "priority-P1"
+        ],
+        "customfield_10000": "Module 16"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "17 \u2014 Data Lineage",
+        "description": "Module 17: Data Lineage\n\nDomain: C \u2014 Enterprise Data Foundation\nDelivery Priority: P1\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-17",
+          "domain-C",
+          "priority-P1"
+        ],
+        "customfield_10000": "Module 17"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "18 \u2014 Master and Reference Data",
+        "description": "Module 18: Master and Reference Data\n\nDomain: C \u2014 Enterprise Data Foundation\nDelivery Priority: P1\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-18",
+          "domain-C",
+          "priority-P1"
+        ],
+        "customfield_10000": "Module 18"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "19 \u2014 Knowledge Base Management",
+        "description": "Module 19: Knowledge Base Management\n\nDomain: D \u2014 Knowledge and Enterprise Memory\nDelivery Priority: P1\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-19",
+          "domain-D",
+          "priority-P1"
+        ],
+        "customfield_10000": "Module 19"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "20 \u2014 Document Intelligence",
+        "description": "Module 20: Document Intelligence\n\nDomain: D \u2014 Knowledge and Enterprise Memory\nDelivery Priority: P1\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-20",
+          "domain-D",
+          "priority-P1"
+        ],
+        "customfield_10000": "Module 20"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "21 \u2014 Enterprise Search and Knowledge Explorer",
+        "description": "Module 21: Enterprise Search and Knowledge Explorer\n\nDomain: D \u2014 Knowledge and Enterprise Memory\nDelivery Priority: P1\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-21",
+          "domain-D",
+          "priority-P1"
+        ],
+        "customfield_10000": "Module 21"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "22 \u2014 Knowledge Graph",
+        "description": "Module 22: Knowledge Graph\n\nDomain: D \u2014 Knowledge and Enterprise Memory\nDelivery Priority: P1\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-22",
+          "domain-D",
+          "priority-P1"
+        ],
+        "customfield_10000": "Module 22"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "23 \u2014 Organizational Memory",
+        "description": "Module 23: Organizational Memory\n\nDomain: D \u2014 Knowledge and Enterprise Memory\nDelivery Priority: P1\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-23",
+          "domain-D",
+          "priority-P1"
+        ],
+        "customfield_10000": "Module 23"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "24 \u2014 Enterprise Brain Module",
+        "description": "Module 24: Enterprise Brain Module\n\nDomain: E \u2014 Enterprise Intelligence and Agentic Operations\nDelivery Priority: P2\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-24",
+          "domain-E",
+          "priority-P2"
+        ],
+        "customfield_10000": "Module 24"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "25 \u2014 AI Gateway and Model Management",
+        "description": "Module 25: AI Gateway and Model Management\n\nDomain: E \u2014 Enterprise Intelligence and Agentic Operations\nDelivery Priority: P2\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-25",
+          "domain-E",
+          "priority-P2"
+        ],
+        "customfield_10000": "Module 25"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "26 \u2014 Prompt Management",
+        "description": "Module 26: Prompt Management\n\nDomain: E \u2014 Enterprise Intelligence and Agentic Operations\nDelivery Priority: P2\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-26",
+          "domain-E",
+          "priority-P2"
+        ],
+        "customfield_10000": "Module 26"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "27 \u2014 Agent Management",
+        "description": "Module 27: Agent Management\n\nDomain: E \u2014 Enterprise Intelligence and Agentic Operations\nDelivery Priority: P2\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-27",
+          "domain-E",
+          "priority-P2"
+        ],
+        "customfield_10000": "Module 27"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "28 \u2014 Skills and Tool Management",
+        "description": "Module 28: Skills and Tool Management\n\nDomain: E \u2014 Enterprise Intelligence and Agentic Operations\nDelivery Priority: P2\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-28",
+          "domain-E",
+          "priority-P2"
+        ],
+        "customfield_10000": "Module 28"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "29 \u2014 Workflow and Orchestration",
+        "description": "Module 29: Workflow and Orchestration\n\nDomain: E \u2014 Enterprise Intelligence and Agentic Operations\nDelivery Priority: P2\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-29",
+          "domain-E",
+          "priority-P2"
+        ],
+        "customfield_10000": "Module 29"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "30 \u2014 Human Approval Management",
+        "description": "Module 30: Human Approval Management\n\nDomain: E \u2014 Enterprise Intelligence and Agentic Operations\nDelivery Priority: P2\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-30",
+          "domain-E",
+          "priority-P2"
+        ],
+        "customfield_10000": "Module 30"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "31 \u2014 Role Command Centre",
+        "description": "Module 31: Role Command Centre\n\nDomain: F \u2014 User Work and Command Centres\nDelivery Priority: P3\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Medium"
+        },
+        "labels": [
+          "module-31",
+          "domain-F",
+          "priority-P3"
+        ],
+        "customfield_10000": "Module 31"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "32 \u2014 Unified Inbox",
+        "description": "Module 32: Unified Inbox\n\nDomain: F \u2014 User Work and Command Centres\nDelivery Priority: P3\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Medium"
+        },
+        "labels": [
+          "module-32",
+          "domain-F",
+          "priority-P3"
+        ],
+        "customfield_10000": "Module 32"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "33 \u2014 Meeting Intelligence",
+        "description": "Module 33: Meeting Intelligence\n\nDomain: F \u2014 User Work and Command Centres\nDelivery Priority: P3\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Medium"
+        },
+        "labels": [
+          "module-33",
+          "domain-F",
+          "priority-P3"
+        ],
+        "customfield_10000": "Module 33"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "34 \u2014 Action and Commitment Management",
+        "description": "Module 34: Action and Commitment Management\n\nDomain: F \u2014 User Work and Command Centres\nDelivery Priority: P3\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Medium"
+        },
+        "labels": [
+          "module-34",
+          "domain-F",
+          "priority-P3"
+        ],
+        "customfield_10000": "Module 34"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "35 \u2014 Project and Portfolio Management",
+        "description": "Module 35: Project and Portfolio Management\n\nDomain: F \u2014 User Work and Command Centres\nDelivery Priority: P3\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Medium"
+        },
+        "labels": [
+          "module-35",
+          "domain-F",
+          "priority-P3"
+        ],
+        "customfield_10000": "Module 35"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "36 \u2014 Notifications and Alert Intelligence",
+        "description": "Module 36: Notifications and Alert Intelligence\n\nDomain: F \u2014 User Work and Command Centres\nDelivery Priority: P3\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Medium"
+        },
+        "labels": [
+          "module-36",
+          "domain-F",
+          "priority-P3"
+        ],
+        "customfield_10000": "Module 36"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "37 \u2014 Desktop Companion",
+        "description": "Module 37: Desktop Companion\n\nDomain: F \u2014 User Work and Command Centres\nDelivery Priority: P3\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Medium"
+        },
+        "labels": [
+          "module-37",
+          "domain-F",
+          "priority-P3"
+        ],
+        "customfield_10000": "Module 37"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "38 \u2014 Policy Management",
+        "description": "Module 38: Policy Management\n\nDomain: G \u2014 Governance, Security and Operations\nDelivery Priority: P0/P2\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-38",
+          "domain-G",
+          "priority-P0/P2"
+        ],
+        "customfield_10000": "Module 38"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "39 \u2014 Privacy and Consent",
+        "description": "Module 39: Privacy and Consent\n\nDomain: G \u2014 Governance, Security and Operations\nDelivery Priority: P0/P2\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-39",
+          "domain-G",
+          "priority-P0/P2"
+        ],
+        "customfield_10000": "Module 39"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "40 \u2014 Audit Trail",
+        "description": "Module 40: Audit Trail\n\nDomain: G \u2014 Governance, Security and Operations\nDelivery Priority: P0/P2\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-40",
+          "domain-G",
+          "priority-P0/P2"
+        ],
+        "customfield_10000": "Module 40"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "41 \u2014 Observability",
+        "description": "Module 41: Observability\n\nDomain: G \u2014 Governance, Security and Operations\nDelivery Priority: P0/P2\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-41",
+          "domain-G",
+          "priority-P0/P2"
+        ],
+        "customfield_10000": "Module 41"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "42 \u2014 AI Evaluation and Assurance",
+        "description": "Module 42: AI Evaluation and Assurance\n\nDomain: G \u2014 Governance, Security and Operations\nDelivery Priority: P0/P2\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "High"
+        },
+        "labels": [
+          "module-42",
+          "domain-G",
+          "priority-P0/P2"
+        ],
+        "customfield_10000": "Module 42"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "43 \u2014 Platform Administration",
+        "description": "Module 43: Platform Administration\n\nDomain: H \u2014 Platform Administration and Engineering\nDelivery Priority: P0/P4\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Highest"
+        },
+        "labels": [
+          "module-43",
+          "domain-H",
+          "priority-P0/P4"
+        ],
+        "customfield_10000": "Module 43"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "44 \u2014 Developer and API Management",
+        "description": "Module 44: Developer and API Management\n\nDomain: H \u2014 Platform Administration and Engineering\nDelivery Priority: P0/P4\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Highest"
+        },
+        "labels": [
+          "module-44",
+          "domain-H",
+          "priority-P0/P4"
+        ],
+        "customfield_10000": "Module 44"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "45 \u2014 File and Media Management",
+        "description": "Module 45: File and Media Management\n\nDomain: H \u2014 Platform Administration and Engineering\nDelivery Priority: P0/P4\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Highest"
+        },
+        "labels": [
+          "module-45",
+          "domain-H",
+          "priority-P0/P4"
+        ],
+        "customfield_10000": "Module 45"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "46 \u2014 Notification Template Management",
+        "description": "Module 46: Notification Template Management\n\nDomain: H \u2014 Platform Administration and Engineering\nDelivery Priority: P0/P4\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Highest"
+        },
+        "labels": [
+          "module-46",
+          "domain-H",
+          "priority-P0/P4"
+        ],
+        "customfield_10000": "Module 46"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "47 \u2014 Feature Flag and Release Management",
+        "description": "Module 47: Feature Flag and Release Management\n\nDomain: H \u2014 Platform Administration and Engineering\nDelivery Priority: P0/P4\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Highest"
+        },
+        "labels": [
+          "module-47",
+          "domain-H",
+          "priority-P0/P4"
+        ],
+        "customfield_10000": "Module 47"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "48 \u2014 Support and Feedback",
+        "description": "Module 48: Support and Feedback\n\nDomain: H \u2014 Platform Administration and Engineering\nDelivery Priority: P0/P4\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Highest"
+        },
+        "labels": [
+          "module-48",
+          "domain-H",
+          "priority-P0/P4"
+        ],
+        "customfield_10000": "Module 48"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "49 \u2014 Backup, Recovery and Continuity",
+        "description": "Module 49: Backup, Recovery and Continuity\n\nDomain: H \u2014 Platform Administration and Engineering\nDelivery Priority: P0/P4\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Highest"
+        },
+        "labels": [
+          "module-49",
+          "domain-H",
+          "priority-P0/P4"
+        ],
+        "customfield_10000": "Module 49"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "50 \u2014 Billing, Payments and Revenue Management",
+        "description": "Module 50: Billing, Payments and Revenue Management\n\nDomain: H \u2014 Platform Administration and Engineering\nDelivery Priority: P0/P4\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Highest"
+        },
+        "labels": [
+          "module-50",
+          "domain-H",
+          "priority-P0/P4"
+        ],
+        "customfield_10000": "Module 50"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "51 \u2014 Department Cockpits",
+        "description": "Module 51: Department Cockpits\n\nDomain: I \u2014 Domain Experiences and Products\nDelivery Priority: P3/P4\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Medium"
+        },
+        "labels": [
+          "module-51",
+          "domain-I",
+          "priority-P3/P4"
+        ],
+        "customfield_10000": "Module 51"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "52 \u2014 Product Applications",
+        "description": "Module 52: Product Applications\n\nDomain: I \u2014 Domain Experiences and Products\nDelivery Priority: P3/P4\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Medium"
+        },
+        "labels": [
+          "module-52",
+          "domain-I",
+          "priority-P3/P4"
+        ],
+        "customfield_10000": "Module 52"
+      }
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "ISO"
+        },
+        "issuetype": {
+          "name": "Epic"
+        },
+        "summary": "53 \u2014 Trial, Evaluation and Conversion Management",
+        "description": "Module 53: Trial, Evaluation and Conversion Management\n\nDomain: J \u2014 Trial, Evaluation and Conversion\nDelivery Priority: P4\n\nImplement following SPARC methodology with 6 ticket slices:\n1. CONTRACT - API and permission contracts\n2. DATA - Database and persistence\n3. BE - Backend implementation\n4. FE - Frontend implementation\n5. QA - Testing and quality assurance\n6. OPS - Operations and deployment",
+        "priority": {
+          "name": "Low"
+        },
+        "labels": [
+          "module-53",
+          "domain-J",
+          "priority-P4"
+        ],
+        "customfield_10000": "Module 53"
+      }
+    }
+  ],
+  "metadata": {
+    "project": "ISO",
+    "project_name": "i-Source One",
+    "total_epics": 53,
+    "generated": "2026-08-24",
+    "description": "Bulk import of 53 module epics for i-Source One SaaS platform"
+  }
+}
